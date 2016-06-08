@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Prediction App for EURO 2016 Cup</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/angular-material.min.css" rel="stylesheet" />
+    <link href="app-content/app.css" rel="stylesheet" />
+</head>
+<body class="container">
+    <!-- header -->
+    <header>
+        <ul class="nav nav-tabs">
+            <li ng-class="{active: activeTab === 'home'}"><a ui-sref="home">Home</a></li>
+            <li ng-class="{active: activeTab === 'account'}"><a ui-sref="account">Account</a></li>
+            <li><a href="/login" target="_self">Logout <span id='user_info'></span></a></li>
+
+        </ul>
+        <div class="flash-message" ng-if="flash">
+            <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main ui-view></main>
+
+    <!-- footer -->
+    <footer></footer>
+
+    <!-- external scripts -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/angular-ui-router.min.js"></script>
+    <script src="/js/angular-aria.min.js"></script>
+    <script src="/js/angular-animate.min.js"></script>
+    <script src="/js/angular-material.min.js"></script>
+    <script src="/js/angular-messages.min.js"></script>
+    <script src="/js/svg-assets-cache.js"></script>
+
+
+    <!-- application scripts -->
+    <script src="app.js"></script>
+    <script src="app-services/user.service.js"></script>
+    <script src="app-services/flash.service.js"></script>
+    <script src="app-services/schedule.service.js"></script>
+    <script src="home/index.controller.js"></script>
+    <script src="account/index.controller.js"></script>
+</body>
+</html>

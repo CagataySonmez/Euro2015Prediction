@@ -1,0 +1,30 @@
+﻿<h1></h1>
+
+<div ng-cloak class="tabsdemoDynamicHeight">
+  <md-content>
+    <md-tabs md-selected="vm.TabIndex" md-dynamic-height md-border-bottom>
+
+      <md-tab label="{{vm.TabTexts[$index]}}"  ng-repeat="stage in vm.schedule.Stages">
+        <md-content class="md-padding">
+          <h1 class="md-display-2"></h1>
+          <div ng-repeat="day in stage">
+              <div class="stage-item">
+                <div class="date">
+                    {{day[0].date | day_filter }}
+                </div>
+                <div class="match-item" ng-repeat="match in day">
+                     <div class="time"> {{match.date | time_filter}}</div>
+                    <div class="match">
+                    	{{match.team1}} <input ng-disabled="!vm.matchStatus[match.match_id].editable" type="number" name="input" min="0" max="99" ng-model="match.homescore" required> - 
+                    	<input ng-disabled="!vm.matchStatus[match.match_id].editable" type="number" name="input" min="0" max="99"  ng-model="match.awayscore" required> {{match.team2}}
+                    	<button ng-disabled="(!match.homescore && match.homescore!==0) || (!match.awayscore && match.awayscore!==0) || !vm.matchStatus[match.match_id].editable" ng-click="handleClick(match.match_id,match.homescore,match.awayscore)" class="md-raised md-button md-ink-ripple" type="button" aria-label="Kaydet"><span class="ng-scope">Kaydet</span><div class="md-ripple-container"></div></button>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </md-content>
+      </md-tab>
+
+    </md-tabs>
+  </md-content>
+</div>
