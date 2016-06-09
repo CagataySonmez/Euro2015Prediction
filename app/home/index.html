@@ -2,7 +2,7 @@
 
 <div ng-cloak class="tabsdemoDynamicHeight">
   <md-content>
-    <md-tabs md-selected="vm.TabIndex" md-dynamic-height>
+    <md-tabs md-selected="vm.TabIndex" md-dynamic-height md-center-tabs = "false">
 
       <md-tab label="{{vm.TabTexts[$index]}}"  ng-repeat="stage in vm.schedule.Stages">
         <md-content class="md-padding">
