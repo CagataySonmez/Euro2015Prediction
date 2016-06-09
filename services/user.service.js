@@ -64,7 +64,7 @@ function create(userParam) {
 
             if (user) {
                 // username already exists
-                deferred.reject('Username "' + userParam.username + '" is already taken');
+                deferred.reject('Sicil numarası "' + userParam.username + '" zaten kayıt olmuş!');
             } else {
                 createUser();
             }
@@ -105,7 +105,7 @@ function update(_id, userParam) {
 
                     if (user) {
                         // username already exists
-                        deferred.reject('Username "' + req.body.username + '" is already taken')
+                        deferred.reject('Sicil numarası "' + req.body.username + '" zaten kayıt olmuş!')
                     } else {
                         updateUser();
                     }

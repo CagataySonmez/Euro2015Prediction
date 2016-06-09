@@ -8,7 +8,7 @@
         .filter('time_filter', MatchDateFormatter)
         .controller('Home.IndexController', Controller);
 
-    function Controller($scope, UserService, ScheduleService) {
+    function Controller($scope, UserService, ScheduleService, FlashService) {
         var vm = this;
 
         vm.user = null;
@@ -56,11 +56,36 @@
             UserService.GetCurrent().then(function (user) {
                 vm.user = user;
                 document.getElementById('user_info').innerHTML = '(' + vm.user.firstName + ' ' + vm.user.lastName + ')';
+                ScheduleService.GetPredictions(vm.user.username,
+                    function(result){
+                        var predictions = result.data;
+                        console.log(predictions);
+                        for(var i=0; i<predictions.length; i++){
+                            if(predictions[i].matchid){
+                                vm.matchStatus[predictions[i].matchid]['awayscore'] = predictions[i].awayscore;
+                                vm.matchStatus[predictions[i].matchid]['homescore'] = predictions[i].homescore;
+                            }
+                        }
+                    },
+                    function(err){
+                        console.log(err);
+                    }
+                );
             });
+
+
         }
 
         $scope.handleClick = function(match_id, score1, score2){
-            alert("match " + match_id + ", score " + score1 + "-" + score2);
+            ScheduleService.SetPredictions(
+                {username : vm.user.username, matchid : match_id, homescore : score1, awayscore : score2},
+                function(result){
+                    FlashService.Success('Tahmininiz başarıyla kaydedildi');
+                },
+                function(err){
+                    FlashService.Success('Tahmininiz kaydedilemedi!');
+                }
+            );
         }
     }
 

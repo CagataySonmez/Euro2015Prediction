@@ -15,7 +15,7 @@ router.post('/', function (req, res) {
         json: true
     }, function (error, response, body) {
         if (error) {
-            return res.render('register', { error: 'An error occurred' });
+            return res.render('register', { error: 'Bir hata oluştu' });
         }
 
         if (response.statusCode !== 200) {
@@ -28,7 +28,7 @@ router.post('/', function (req, res) {
         }
 
         // return to login page with success message
-        req.session.success = 'Registration successful';
+        req.session.success = 'Başarılı şekilde kayıt oldunuz';
         return res.redirect('/login');
     });
 });
