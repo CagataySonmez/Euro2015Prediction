@@ -17,13 +17,15 @@
                     <div class="match">
                     	<span>{{match.team1}}</span>
                       
-                      <input ng-disabled="!vm.matchStatus[match.match_id].editable" ng-value="vm.matchStatus[match.match_id].homescore" type="number" name="input" min="0" max="99" ng-model="match.homescore" class="form-control ng-pristine ng-not-empty ng-valid ng-valid-required ng-touched" required> - 
+                      <input ng-disabled="!vm.matchStatus[match.match_id].editable" type="number" name="input" min="0" max="99" ng-model="vm.matchStatus[match.match_id].user_homescore" class="form-control ng-pristine ng-not-empty ng-valid ng-valid-required ng-touched" required> - 
                     	
-                      <input ng-disabled="!vm.matchStatus[match.match_id].editable" ng-value="vm.matchStatus[match.match_id].awayscore" type="number" name="input" min="0" max="99"  ng-model="match.awayscore" class="form-control ng-pristine ng-not-empty ng-valid ng-valid-required ng-touched" required>
+                      <input ng-disabled="!vm.matchStatus[match.match_id].editable" type="number" name="input" min="0" max="99"  ng-model="vm.matchStatus[match.match_id].user_awayscore" class="form-control ng-pristine ng-not-empty ng-valid ng-valid-required ng-touched" required>
 
                       <span>{{match.team2}}</span>
+
+                      <span class="prev_score" ng-hide="!vm.matchStatus[match.match_id].awayscore || !vm.matchStatus[match.match_id].homescore"> (Tahmininiz {{vm.matchStatus[match.match_id].homescore}}-{{vm.matchStatus[match.match_id].awayscore}})</span>
                     	
-                      <button ng-disabled="(!match.homescore && match.homescore!==0) || (!match.awayscore && match.awayscore!==0) || !vm.matchStatus[match.match_id].editable" ng-click="handleClick(match.match_id,match.homescore,match.awayscore)" class="md-raised md-button md-ink-ripple" type="button" aria-label="Kaydet"><span class="ng-scope">Kaydet</span><div class="md-ripple-container"></div></button>
+                      <button ng-disabled="(!vm.matchStatus[match.match_id].user_homescore && vm.matchStatus[match.match_id].user_homescore!==0) || (!vm.matchStatus[match.match_id].user_awayscore && vm.matchStatus[match.match_id].user_awayscore!==0) || !vm.matchStatus[match.match_id].editable" ng-click="handleClick(match.match_id,vm.matchStatus[match.match_id].user_homescore,vm.matchStatus[match.match_id].user_awayscore)" class="md-raised md-button md-ink-ripple" type="button" aria-label="Kaydet"><span class="ng-scope">Kaydet</span><div class="md-ripple-container"></div></button>
                     </div>
                 </div>
               </div>

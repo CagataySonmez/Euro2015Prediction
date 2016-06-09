@@ -66,3 +66,7 @@ body, html {
     width: 60px;
     display: inline;
 }
+
+.stage-item .match-item .match .prev_score{
+    color: #878787;
+}

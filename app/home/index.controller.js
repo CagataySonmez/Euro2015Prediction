@@ -81,6 +81,11 @@
                 {username : vm.user.username, matchid : match_id, homescore : score1, awayscore : score2},
                 function(result){
                     FlashService.Success('Tahmininiz başarıyla kaydedildi');
+                    vm.matchStatus[match_id]['homescore'] = score1;
+                    vm.matchStatus[match_id]['awayscore'] = score2;
+                    vm.matchStatus[match_id]['user_homescore'] = "";
+                    vm.matchStatus[match_id]['user_awayscore'] = "";
+                    //$scope.$apply();
                 },
                 function(err){
                     FlashService.Success('Tahmininiz kaydedilemedi!');
