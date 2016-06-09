@@ -56,6 +56,11 @@
                                         editable = false;
 
                                     vm.matchStatus[vm.schedule.Stages[i][j][k].match_id] = {"editable":editable};
+
+                                    if(vm.schedule.Stages[i][j][k].finished){
+                                        vm.matchStatus[vm.schedule.Stages[i][j][k].match_id]['user_homescore'] = vm.schedule.Stages[i][j][k].team1_score;
+                                        vm.matchStatus[vm.schedule.Stages[i][j][k].match_id]['user_awayscore'] = vm.schedule.Stages[i][j][k].team2_score;
+                                    }
                                 }
                             }
                         }
