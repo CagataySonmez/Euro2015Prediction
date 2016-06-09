@@ -6,6 +6,27 @@ body, html {
     height: inherit !important;
 }
 
+html{
+    background-image: -webkit-radial-gradient(top center,circle farthest-corner,#2c6a93,#000a34);
+    background-image: radial-gradient(circle farthest-corner at top center,#2c6a93,#000a34);
+    color: #FFF;
+}
+
+html:before{
+    background: url(http://img.uefa.com/imgml/2016/euro/bg_pattern.png) top center #007cba;
+    background-size: 100%;
+    opacity: .2;
+    filter: alpha(opacity=20);
+    z-index: 1;
+}
+
+html:after{
+    background-image: radial-gradient(circle closest-corner at top center,#65beec,rgba(101,190,236,0));
+    opacity: .5;
+    filter: alpha(opacity=50);
+    z-index: 2;
+}
+
 .flash-message {
     margin-top: 20px;
 }
