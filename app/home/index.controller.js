@@ -8,7 +8,7 @@
         .filter('time_filter', MatchDateFormatter)
         .controller('Home.IndexController', Controller);
 
-    function Controller($scope, UserService, ScheduleService, FlashService) {
+    function Controller($window, $scope, UserService, ScheduleService, FlashService) {
         var vm = this;
 
         vm.user = null;
@@ -71,9 +71,9 @@
                         console.log(err);
                     }
                 );
+
+                $window.dispatchEvent(new Event('resize'));
             });
-
-
         }
 
         $scope.handleClick = function(match_id, score1, score2){
