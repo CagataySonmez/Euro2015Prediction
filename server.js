@@ -5,6 +5,7 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 var expressJwt = require('express-jwt');
 var config = require('config');
+var schedule = require('matches.json');
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
@@ -23,6 +24,7 @@ app.use('/register', require('./controllers/register.controller'));
 app.use('/app', require('./controllers/app.controller'));
 app.use('/api/users', require('./controllers/api/users.controller'));
 app.use('/api/prediction', require('./controllers/api/prediction.controller'));
+app.get('/schedule', function(req,res){res.json(schedule)});
 
 // make '/app' default route
 app.get('/', function (req, res) {

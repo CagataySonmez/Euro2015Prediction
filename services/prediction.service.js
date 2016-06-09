@@ -2,6 +2,7 @@ var config = require('config');
 var Q = require('q');
 var mongo = require('mongoskin');
 var db = mongo.db(config.connectionString, { native_parser: true });
+var schedule = require('matches.json');
 db.bind('predictions');
 
 var service = {};
@@ -27,6 +28,25 @@ function getPredictions(userName) {
 
 function predictMatch(matchParam) {
     var deferred = Q.defer();
+
+    var shouldSave = false;
+    for(var i=0; i<schedule.Stages.length; i++){
+        for(var j=0; j<schedule.Stages[i].length; j++){
+            for(var k=0; k<schedule.Stages[i][j].length; k++){
+                if(schedule.Stages[i][j][k].match_id === matchParam.matchid){
+                    var matchDate = new Date(schedule.Stages[i][j][k].date);
+                    var now = new Date();
+
+                    if(matchDate > now)
+                        shouldSave = true;
+                }
+            }
+        }
+    }
+    if (!shouldSave){
+        deferred.reject('Maç başladı, tahmin yapamazsınız!');
+        return deferred.promise;
+    }
 
     // validation
     db.predictions.findOne(
