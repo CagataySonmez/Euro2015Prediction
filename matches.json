@@ -39,24 +39,24 @@
       "match_id": 5,
       "team1": "Türkiye",
       "team2": "Hırvatistan",
-      "finished": false,
+      "finished": true,
       "team1_score": 0,
-      "team2_score": 0,
+      "team2_score": 1,
       "date": "2016-06-12T13:00:00.000Z"
     }, {
       "match_id": 6,
       "team1": "Polonya",
       "team2": "Kuzey İrlanda",
-      "finished": false,
-      "team1_score": 0,
+      "finished": true,
+      "team1_score": 1,
       "team2_score": 0,
       "date": "2016-06-12T16:00:00.000Z"
     }, {
       "match_id": 7,
       "team1": "Almanya",
       "team2": "Ukrayna",
-      "finished": false,
-      "team1_score": 0,
+      "finished": true,
+      "team1_score": 2,
       "team2_score": 0,
       "date": "2016-06-12T19:00:00.000Z"
     }],
