@@ -23,7 +23,7 @@
 
                       <span>{{match.team2}}</span>
 
-                      <span class="prev_score" ng-hide="(!vm.matchStatus[match.match_id].awayscore && vm.matchStatus[match.match_id].awayscore!==0) || (!vm.matchStatus[match.match_id].homescore && vm.matchStatus[match.match_id].homescore!==0)"> (Tahmininiz {{vm.matchStatus[match.match_id].homescore}}-{{vm.matchStatus[match.match_id].awayscore}})</span>
+                      <span class="prev_score" ng-hide="(!vm.matchStatus[match.match_id].predicted_awayscore && vm.matchStatus[match.match_id].predicted_awayscore!==0) || (!vm.matchStatus[match.match_id].predicted_homescore && vm.matchStatus[match.match_id].predicted_homescore!==0)"> (Tahmin {{vm.matchStatus[match.match_id].predicted_homescore}}-{{vm.matchStatus[match.match_id].predicted_awayscore}}<span ng-hide="!vm.matchStatus[match.match_id].has_point">, Puan {{vm.matchStatus[match.match_id].point}}</span>)</span>
                     	
                       <button ng-disabled="(!vm.matchStatus[match.match_id].user_homescore && vm.matchStatus[match.match_id].user_homescore!==0) || (!vm.matchStatus[match.match_id].user_awayscore && vm.matchStatus[match.match_id].user_awayscore!==0) || !vm.matchStatus[match.match_id].editable" ng-click="handleClick(match.match_id,vm.matchStatus[match.match_id].user_homescore,vm.matchStatus[match.match_id].user_awayscore)" class="md-raised md-button md-ink-ripple" type="button" aria-label="Kaydet"><span class="ng-scope">Kaydet</span><div class="md-ripple-container"></div></button>
                     </div>

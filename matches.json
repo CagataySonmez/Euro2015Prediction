@@ -5,34 +5,34 @@
       "match_id": 1,
       "team1": "Fransa",
       "team2": "Romanya",
-      "finished": false,
-      "team1_score": 0,
-      "team2_score": 0,
+      "finished": true,
+      "team1_score": 2,
+      "team2_score": 1,
       "date": "2016-06-10T19:00:00.000Z"
     }],
     [{
       "match_id": 2,
       "team1": "Arnavutluk",
       "team2": "İsviçre",
-      "finished": false,
+      "finished": true,
       "team1_score": 0,
-      "team2_score": 0,
+      "team2_score": 1,
       "date": "2016-06-11T13:00:00.000Z"
     }, {
       "match_id": 3,
       "team1": "Galler",
       "team2": "Slovakya",
-      "finished": false,
-      "team1_score": 0,
-      "team2_score": 0,
+      "finished": true,
+      "team1_score": 2,
+      "team2_score": 1,
       "date": "2016-06-11T16:00:00.000Z"
     }, {
       "match_id": 4,
       "team1": "İngiltere",
       "team2": "Rusya",
-      "finished": false,
-      "team1_score": 0,
-      "team2_score": 0,
+      "finished": true,
+      "team1_score": 1,
+      "team2_score": 1,
       "date": "2016-06-11T19:00:00.000Z"
     }],
     [{
