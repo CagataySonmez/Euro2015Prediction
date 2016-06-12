@@ -31,6 +31,13 @@
                 controller: 'Points.IndexController',
                 controllerAs: 'vm',
                 data: { activeTab: 'points' }
+            })
+            .state('rules', {
+                url: '/rules',
+                templateUrl: 'rules/index.html',
+                controller: 'Rules.IndexController',
+                controllerAs: 'vm',
+                data: { activeTab: 'rules' }
             });
     }
 
