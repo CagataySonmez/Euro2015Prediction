@@ -24,6 +24,13 @@
                 controller: 'Account.IndexController',
                 controllerAs: 'vm',
                 data: { activeTab: 'account' }
+            })
+            .state('points', {
+                url: '/points',
+                templateUrl: 'points/index.html',
+                controller: 'Points.IndexController',
+                controllerAs: 'vm',
+                data: { activeTab: 'points' }
             });
     }
 

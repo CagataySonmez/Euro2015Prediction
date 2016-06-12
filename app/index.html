@@ -14,6 +14,7 @@
         <ul class="nav nav-tabs">
             <li ng-class="{active: activeTab === 'home'}"><a ui-sref="home">Ana Sayfa</a></li>
             <li ng-class="{active: activeTab === 'account'}"><a ui-sref="account">Hesabım</a></li>
+            <li ng-class="{active: activeTab === 'points'}"><a ui-sref="points">Sonuçlar</a></li>
             <li><a href="/login" target="_self">Çıkış <span id='user_info'></span></a></li>
 
         </ul>
@@ -46,5 +47,6 @@
     <script src="app-services/schedule.service.js"></script>
     <script src="home/index.controller.js"></script>
     <script src="account/index.controller.js"></script>
+    <script src="points/index.controller.js"></script>
 </body>
 </html>

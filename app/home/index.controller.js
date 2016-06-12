@@ -69,7 +69,7 @@
                         ScheduleService.GetPredictions(vm.user.username,
                             function(prediction_result){
                                 var predictions = prediction_result.data;
-                                console.log(predictions);
+
                                 for(var i=0; i<predictions.length; i++){
                                     if(predictions[i].matchid){
                                         vm.matchStatus[predictions[i].matchid]['predicted_awayscore'] = predictions[i].awayscore;
