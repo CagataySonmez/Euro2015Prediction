@@ -2,6 +2,7 @@ var config = require('config');
 var express = require('express');
 var router = express.Router();
 var predictionService = require('services/prediction.service');
+var topPointsCache = null;
 
 // routes
 router.post('/predictMatch', predictMatch);
@@ -48,7 +49,27 @@ function getPoint(req, res) {
     predictionService.getPoint(req.params.username)
         .then(function (result) {
             if (result) {
-                res.send(result);
+                if(topPointsCache !== null){
+                    console.log(topPointsCache);
+                    topPointsCache.yourPoint = result;
+                    res.send(topPointsCache);
+                }
+                else{
+                    predictionService.getPoints()
+                        .then(function (topPoints) {
+                            if (topPoints) {
+                                topPointsCache = topPoints;
+                                topPointsCache.yourPoint = result;
+                                res.send(topPointsCache);     
+                            } else {
+                                res.sendStatus(404);
+                            }
+                        })
+                        .catch(function (err) {
+                            res.status(400).send(err);
+                        });
+                }
+                
             } else {
                 res.sendStatus(404);
             }

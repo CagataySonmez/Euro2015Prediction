@@ -9,13 +9,28 @@ db.bind('users');
 var service = {};
 
 service.getPoint = getPoint;
+service.getPoints = getPoints;
 service.getPredictions = getPredictions;
 service.predictMatch = predictMatch;
 
 module.exports = service;
 
-
 function getPoint(userName) {
+    var deferred = Q.defer();
+
+    calculatePoint(userName,'','',
+        function(result){
+            deferred.resolve(result);
+        },
+        function(err){
+            deferred.reject(err)
+        }
+    );
+
+    return deferred.promise;
+}
+
+function getPoints() {
     var deferred = Q.defer();
 
     db.users.find().toArray(
@@ -26,7 +41,6 @@ function getPoint(userName) {
         else
         {
             var points = new Object();
-            points.yourPoint = null;
             points.topPoints = new Array();
             var numOfFunctionCall = 0;
 
@@ -35,9 +49,6 @@ function getPoint(userName) {
                     function(result){
                         numOfFunctionCall++;
                         points.topPoints.push(result);
-
-                        if(userName === result.username)
-                            points.yourPoint = result;
 
                         if(numOfFunctionCall === users.length){
                             //sort points
