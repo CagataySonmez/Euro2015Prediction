@@ -72,9 +72,9 @@
       "match_id": 9,
       "team1": "İrlanda",
       "team2": "İsveç",
-      "finished": false,
-      "team1_score": 0,
-      "team2_score": 0,
+      "finished": true,
+      "team1_score": 1,
+      "team2_score": 1,
       "date": "2016-06-13T16:00:00.000Z"
     }, {
       "match_id": 10,
