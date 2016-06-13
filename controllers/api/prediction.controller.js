@@ -11,6 +11,9 @@ router.get('/getPoint/:username', getPoint);
 module.exports = router;
 
 function predictMatch(req, res) {
+    if (req.body.username !== req.user.un)
+        return res.status(401).send('Sadece kendi hesabınız için tahmin girebilirsiniz!');
+
     predictionService.predictMatch(req.body)
         .then(function () {
             res.sendStatus(200);
@@ -21,6 +24,9 @@ function predictMatch(req, res) {
 }
 
 function getPredictions(req, res) {
+    if (req.params.username !== req.user.un)
+        return res.status(401).send('Sadece kendi hesabınız için tahminleri görebilirsiniz!');
+
     predictionService.getPredictions(req.params.username)
         .then(function (result) {
             if (result) {
@@ -36,6 +42,9 @@ function getPredictions(req, res) {
 
 
 function getPoint(req, res) {
+    if (req.params.username !== req.user.un)
+        return res.status(401).send('Sadece kendi hesabınız için sonuçları görebilirsiniz!');
+
     predictionService.getPoint(req.params.username)
         .then(function (result) {
             if (result) {
