@@ -1,3 +1,18 @@
-﻿<h2>Sonuçlar</h2>
+﻿<h3>{{vm.points.yourPoint.numOfPredictions}} tahmini yapıp {{vm.points.yourPoint.point}} puan aldınız!</h3>
+<br>
+<h2>Top 25</h2>
 
-<h3>{{vm.point.numOfPredictions}} tahmini yapıp {{vm.point.point}} puan aldınız!</h3>
+<table class="table">
+    <tr class='table_title'>
+        <td>Sıralama</td>
+        <td>Kullanıcı</td>
+        <td>Puan</td>
+        <td>Tahmin Sayısı</td>
+    </tr>
+    <tr ng-repeat="point in vm.points.topPoints">
+    	<td>{{$index + 1}}</td>
+        <td>{{point.firstname}} {{point.lastname}} ({{point.username}})</td>
+        <td>{{point.point}}</td>
+        <td>{{point.numOfPredictions}}</td>
+    </tr>
+</table>

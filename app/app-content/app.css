@@ -91,3 +91,11 @@ html:after{
 .stage-item .match-item .match .prev_score{
     color: #878787;
 }
+
+.table_title{
+    font-weight: bold;
+}
+
+.table{
+    border-bottom: 1px solid #ccc;
+}
