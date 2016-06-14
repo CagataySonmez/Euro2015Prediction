@@ -80,8 +80,8 @@
       "match_id": 10,
       "team1": "Belçika",
       "team2": "İtalya",
-      "finished": false,
-      "team1_score": 0,
+      "finished": true,
+      "team1_score": 2,
       "team2_score": 0,
       "date": "2016-06-13T19:00:00.000Z"
     }],
