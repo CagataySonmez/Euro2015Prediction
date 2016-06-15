@@ -17,6 +17,8 @@ router.get('/token', function (req, res) {
             console.log(req.session.token);
             console.log('--------------------------------------------');
 
+	res.set('Cache-Control', 'no-cache');
+
     res.send(req.session.token);
 });
 
