@@ -46,9 +46,17 @@ function registerUser(req, res) {
 }
 
 function getCurrentUser(req, res) {
+
+    console.log('------------getCurrentUser-------------------');
+    console.log(req.user);
+    console.log('--------------------------------------------');
+
     userService.getById(req.user.sub)
         .then(function (user) {
             if (user) {
+                console.log('------------getCurrentUser -> after resolve-------------------');
+                console.log(user);
+                console.log('--------------------------------------------');
                 res.send(user);
             } else {
                 res.sendStatus(404);
