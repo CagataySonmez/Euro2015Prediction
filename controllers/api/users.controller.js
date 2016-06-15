@@ -51,6 +51,10 @@ function getCurrentUser(req, res) {
     console.log(req.user);
     console.log('--------------------------------------------');
 
+    console.log('------------getCurrentUser token in the heade-------------------');
+    console.log(req.headers.authorization);
+    console.log('--------------------------------------------');
+
     userService.getById(req.user.sub)
         .then(function (user) {
             if (user) {
