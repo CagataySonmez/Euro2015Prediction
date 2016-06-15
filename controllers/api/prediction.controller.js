@@ -50,7 +50,6 @@ function getPoint(req, res) {
         .then(function (result) {
             if (result) {
                 if(topPointsCache !== null){
-                    console.log(topPointsCache);
                     topPointsCache.yourPoint = result;
                     res.send(topPointsCache);
                 }
