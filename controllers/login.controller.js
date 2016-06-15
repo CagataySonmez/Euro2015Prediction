@@ -15,6 +15,9 @@ router.get('/', function (req, res) {
 });
 
 router.post('/', function (req, res) {
+    console.log('------------login.controller -> authenticate-------------------');
+    console.log(req.body);
+    console.log('--------------------------------------------');
     // authenticate using api to maintain clean separation between layers
     request.post({
         url: config.apiUrl + '/users/authenticate',

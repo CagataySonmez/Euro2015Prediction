@@ -20,10 +20,19 @@ module.exports = service;
 function authenticate(username, password) {
     var deferred = Q.defer();
 
+    console.log('------------user.service -> authenticate-------------------');
+    console.log(username + ' ' + password);
+    console.log('--------------------------------------------');
+
     db.users.findOne({ username: username }, function (err, user) {
         if (err) deferred.reject(err);
 
         if (user && bcrypt.compareSync(password, user.hash)) {
+
+            console.log('------------user.service -> after resolve-------------------');
+            console.log(user);
+            console.log('--------------------------------------------');
+
             // authentication successful
             deferred.resolve(jwt.sign({ sub: user._id, un: user.username }, config.secret));
         } else {
