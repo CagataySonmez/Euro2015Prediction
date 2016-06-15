@@ -108,9 +108,9 @@
       "match_id": 13,
       "team1": "Rusya",
       "team2": "Slovakya",
-      "finished": false,
-      "team1_score": 0,
-      "team2_score": 0,
+      "finished": true,
+      "team1_score": 1,
+      "team2_score": 2,
       "date": "2016-06-15T13:00:00.000Z"
     }, {
       "match_id": 14,
