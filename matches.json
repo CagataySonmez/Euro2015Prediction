@@ -133,9 +133,9 @@
       "match_id": 16,
       "team1": "İngiltere",
       "team2": "Galler",
-      "finished": false,
-      "team1_score": 0,
-      "team2_score": 0,
+      "finished": true,
+      "team1_score": 2,
+      "team2_score": 1,
       "date": "2016-06-16T13:00:00.000Z"
     }, {
       "match_id": 17,
