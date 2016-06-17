@@ -158,8 +158,8 @@
       "match_id": 19,
       "team1": "İtalya",
       "team2": "İsveç",
-      "finished": false,
-      "team1_score": 0,
+      "finished": true,
+      "team1_score": 1,
       "team2_score": 0,
       "date": "2016-06-17T13:00:00.000Z"
     }, {
