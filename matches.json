@@ -166,16 +166,16 @@
       "match_id": 20,
       "team1": "Çek Cumhuriyeti",
       "team2": "Hırvatistan",
-      "finished": false,
-      "team1_score": 0,
-      "team2_score": 0,
+      "finished": true,
+      "team1_score": 2,
+      "team2_score": 2,
       "date": "2016-06-17T16:00:00.000Z"
     }, {
       "match_id": 21,
       "team1": "İspanya",
       "team2": "Türkiye",
-      "finished": false,
-      "team1_score": 0,
+      "finished": true,
+      "team1_score": 3,
       "team2_score": 0,
       "date": "2016-06-17T19:00:00.000Z"
     }],
