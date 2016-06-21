@@ -116,48 +116,26 @@ function predictMatch(matchParam) {
         return deferred.promise;
     }
 
-    // validation
-    db.predictions.findOne(
+    db.predictions.update(
         { username : matchParam.username,
-          matchid : matchParam.matchid },
-        function (err, result) {
-            if (err) deferred.reject(err);
-
-            if (result) {
-                update(result._id);
-            } else {
-                create();
-            }
-        });
-
-    function create() {
-        var record = {username : matchParam.username, matchid : matchParam.matchid, homescore : matchParam.homescore, awayscore : matchParam.awayscore}
-
-        db.predictions.insert(
-            record,
-            function (err, doc) {
-                if (err) deferred.reject(err);
-
-                deferred.resolve();
-            });
-    }
-
-    function update(_id) {
-        // fields to update
-        var set = {
+            matchid : matchParam.matchid
+        },
+        {
+            username : matchParam.username,
+            matchid : matchParam.matchid,
             homescore : matchParam.homescore,
-            awayscore : matchParam.awayscore,
-        };
-
-        db.predictions.update(
-            { _id: mongo.helper.toObjectID(_id) },
-            { $set: set },
-            function (err, doc) {
-                if (err) deferred.reject(err);
-
+            awayscore : matchParam.awayscore
+        },
+        {
+            upsert : true
+        },
+        function (err, doc) {
+            if (err)
+                deferred.reject(err);
+            else
                 deferred.resolve();
-            });
-    }
+        }
+    );
 
     return deferred.promise;
 }
