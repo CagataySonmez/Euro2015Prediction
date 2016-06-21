@@ -244,17 +244,17 @@
       "match_id": 29,
       "team1": "Ukrayna",
       "team2": "Polonya",
-      "finished": false,
+      "finished": true,
       "team1_score": 0,
-      "team2_score": 0,
+      "team2_score": 1,
       "date": "2016-06-21T16:00:00.000Z"
     }, {
       "match_id": 30,
       "team1": "Kuzey İrlanda",
       "team2": "Almanya",
-      "finished": false,
+      "finished": true,
       "team1_score": 0,
-      "team2_score": 0,
+      "team2_score": 1,
       "date": "2016-06-21T16:00:00.000Z"
     }, {
       "match_id": 31,
