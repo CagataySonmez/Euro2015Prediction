@@ -11,7 +11,7 @@
     </tr>
     <tr ng-repeat="point in vm.points.topPoints">
     	<td>{{$index + 1}}</td>
-        <td>{{point.firstname}} {{point.lastname}} ({{point.username}})</td>
+        <td>{{point.firstname | capitalizer}} {{point.lastname | capitalizer}} ({{point.username}})</td>
         <td>{{point.point}}</td>
         <td>{{point.numOfPredictions}}</td>
     </tr>
