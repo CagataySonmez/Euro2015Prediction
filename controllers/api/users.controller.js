@@ -13,16 +13,9 @@ router.delete('/:_id', deleteUser);
 module.exports = router;
 
 function authenticateUser(req, res) {
-    console.log('------------user.controller -> authenticate---------------');
-    console.log(req.body);
-    console.log('--------------------------------------------');
-
     userService.authenticate(req.body.username, req.body.password)
         .then(function (token) {
             if (token) {
-                console.log('------------user.controller -> after resolve---------------');
-                console.log(token);
-                console.log('--------------------------------------------');
                 // authentication successful
                 res.send({ token: token });
             } else {
@@ -46,21 +39,9 @@ function registerUser(req, res) {
 }
 
 function getCurrentUser(req, res) {
-
-    console.log('------------getCurrentUser-------------------');
-    console.log(req.user);
-    console.log('--------------------------------------------');
-
-    console.log('------------getCurrentUser token in the heade-------------------');
-    console.log(req.headers.authorization);
-    console.log('--------------------------------------------');
-
     userService.getById(req.user.sub)
         .then(function (user) {
             if (user) {
-                console.log('------------getCurrentUser -> after resolve-------------------');
-                console.log(user);
-                console.log('--------------------------------------------');
                 res.send(user);
             } else {
                 res.sendStatus(404);

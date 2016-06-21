@@ -15,9 +15,6 @@ router.get('/', function (req, res) {
 });
 
 router.post('/', function (req, res) {
-    console.log('------------login.controller -> authenticate-------------------');
-    console.log(req.body);
-    console.log('--------------------------------------------');
     // authenticate using api to maintain clean separation between layers
     request.post({
         url: config.apiUrl + '/users/authenticate',
@@ -34,11 +31,6 @@ router.post('/', function (req, res) {
 
         // save JWT token in the session to make it available to the angular app
         req.session.token = body.token;
-
-
-        console.log('------------token -> session---------------');
-        console.log(req.session.token);
-        console.log('--------------------------------------------');
 
         // redirect to returnUrl
         var returnUrl = req.query.returnUrl && decodeURIComponent(req.query.returnUrl) || '/';

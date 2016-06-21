@@ -12,13 +12,9 @@ router.use('/', function (req, res, next) {
 
 // make JWT token available to angular app
 router.get('/token', function (req, res) {
-
-            console.log('------------token in session-------------------');
-            console.log(req.session.token);
-            console.log('--------------------------------------------');
-
+	//bug fix for firefox!
 	res.set('Cache-Control', 'no-cache');
-
+	
     res.send(req.session.token);
 });
 
