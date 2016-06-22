@@ -277,57 +277,57 @@
       "match_id": 33,
       "team1": "İzlanda",
       "team2": "Avusturya",
-      "finished": false,
-      "team1_score": 0,
-      "team2_score": 0,
+      "finished": true,
+      "team1_score": 2,
+      "team2_score": 1,
       "date": "2016-06-22T16:00:00.000Z"
     }, {
       "match_id": 34,
       "team1": "Macaristan",
       "team2": "Portekiz",
-      "finished": false,
-      "team1_score": 0,
-      "team2_score": 0,
+      "finished": true,
+      "team1_score": 3,
+      "team2_score": 3,
       "date": "2016-06-22T16:00:00.000Z"
     }, {
       "match_id": 35,
       "team1": "İtalya",
       "team2": "İrlanda",
-      "finished": false,
+      "finished": true,
       "team1_score": 0,
-      "team2_score": 0,
+      "team2_score": 1,
       "date": "2016-06-22T19:00:00.000Z"
     }, {
       "match_id": 36,
       "team1": "İsveç",
       "team2": "Belçika",
-      "finished": false,
+      "finished": true,
       "team1_score": 0,
-      "team2_score": 0,
+      "team2_score": 1,
       "date": "2016-06-22T19:00:00.000Z"
     }]
   ],
   [
     [{
       "match_id": 37,
-      "team1": "Belirsiz",
-      "team2": "Belirsiz",
+      "team1": "İsviçre",
+      "team2": "Polonya",
       "finished": false,
       "team1_score": 0,
       "team2_score": 0,
       "date": "2016-06-25T13:00:00.000Z"
     }, {
       "match_id": 38,
-      "team1": "Belirsiz",
-      "team2": "Belirsiz",
+      "team1": "Galler",
+      "team2": "Kuzey İrlanda",
       "finished": false,
       "team1_score": 0,
       "team2_score": 0,
       "date": "2016-06-25T16:00:00.000Z"
     }, {
       "match_id": 39,
-      "team1": "Belirsiz",
-      "team2": "Belirsiz",
+      "team1": "Hırvatistan",
+      "team2": "Portekiz",
       "finished": false,
       "team1_score": 0,
       "team2_score": 0,
@@ -335,24 +335,24 @@
     }],
     [{
       "match_id": 40,
-      "team1": "Belirsiz",
-      "team2": "Belirsiz",
+      "team1": "Fransa",
+      "team2": "İrlanda",
       "finished": false,
       "team1_score": 0,
       "team2_score": 0,
       "date": "2016-06-26T13:00:00.000Z"
     }, {
       "match_id": 41,
-      "team1": "Belirsiz",
-      "team2": "Belirsiz",
+      "team1": "Almanya",
+      "team2": "Slovakya",
       "finished": false,
       "team1_score": 0,
       "team2_score": 0,
       "date": "2016-06-26T16:00:00.000Z"
     }, {
       "match_id": 42,
-      "team1": "Belirsiz",
-      "team2": "Belirsiz",
+      "team1": "Macaristan",
+      "team2": "Belçika",
       "finished": false,
       "team1_score": 0,
       "team2_score": 0,
@@ -360,16 +360,16 @@
     }],
     [{
       "match_id": 43,
-      "team1": "Belirsiz",
-      "team2": "Belirsiz",
+      "team1": "İtalya",
+      "team2": "İspanya",
       "finished": false,
       "team1_score": 0,
       "team2_score": 0,
       "date": "2016-06-27T16:00:00.000Z"
     }, {
       "match_id": 44,
-      "team1": "Belirsiz",
-      "team2": "Belirsiz",
+      "team1": "İngiltere",
+      "team2": "İzlanda",
       "finished": false,
       "team1_score": 0,
       "team2_score": 0,
