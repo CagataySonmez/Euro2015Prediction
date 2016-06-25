@@ -312,23 +312,23 @@
       "match_id": 37,
       "team1": "İsviçre",
       "team2": "Polonya",
-      "finished": false,
-      "team1_score": 0,
-      "team2_score": 0,
+      "finished": true,
+      "team1_score": 1,
+      "team2_score": 1,
       "date": "2016-06-25T13:00:00.000Z"
     }, {
       "match_id": 38,
       "team1": "Galler",
       "team2": "Kuzey İrlanda",
-      "finished": false,
-      "team1_score": 0,
+      "finished": true,
+      "team1_score": 1,
       "team2_score": 0,
       "date": "2016-06-25T16:00:00.000Z"
     }, {
       "match_id": 39,
       "team1": "Hırvatistan",
       "team2": "Portekiz",
-      "finished": false,
+      "finished": true,
       "team1_score": 0,
       "team2_score": 0,
       "date": "2016-06-25T19:00:00.000Z"
