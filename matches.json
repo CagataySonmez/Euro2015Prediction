@@ -381,9 +381,9 @@
       "match_id": 45,
       "team1": "Polonya",
       "team2": "Portekiz",
-      "finished": false,
-      "team1_score": 0,
-      "team2_score": 0,
+      "finished": true,
+      "team1_score": 1,
+      "team2_score": 1,
       "date": "2016-06-30T19:00:00.000Z"
     }],
     [{
@@ -417,7 +417,7 @@
   [
     [{
       "match_id": 49,
-      "team1": "Belirsiz",
+      "team1": "Portekiz",
       "team2": "Belirsiz",
       "finished": false,
       "team1_score": 0,
