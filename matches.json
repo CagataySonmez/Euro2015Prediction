@@ -390,9 +390,9 @@
       "match_id": 46,
       "team1": "Galler",
       "team2": "Belçika",
-      "finished": false,
-      "team1_score": 0,
-      "team2_score": 0,
+      "finished": true,
+      "team1_score": 3,
+      "team2_score": 1,
       "date": "2016-07-01T19:00:00.000Z"
     }],
     [{
@@ -418,7 +418,7 @@
     [{
       "match_id": 49,
       "team1": "Portekiz",
-      "team2": "Belirsiz",
+      "team2": "Galler",
       "finished": false,
       "team1_score": 0,
       "team2_score": 0,
