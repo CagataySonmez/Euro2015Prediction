@@ -399,9 +399,9 @@
       "match_id": 47,
       "team1": "Almanya",
       "team2": "İtalya",
-      "finished": false,
-      "team1_score": 0,
-      "team2_score": 0,
+      "finished": true,
+      "team1_score": 1,
+      "team2_score": 1,
       "date": "2016-07-02T19:00:00.000Z"
     }],
     [{
