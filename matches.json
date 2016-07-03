@@ -408,9 +408,9 @@
       "match_id": 48,
       "team1": "Fransa",
       "team2": "İzlanda",
-      "finished": false,
-      "team1_score": 0,
-      "team2_score": 0,
+      "finished": true,
+      "team1_score": 5,
+      "team2_score": 2,
       "date": "2016-07-03T19:00:00.000Z"
     }]
   ],
@@ -427,7 +427,7 @@
     [{
       "match_id": 50,
       "team1": "Almanya",
-      "team2": "Belirsiz",
+      "team2": "Fransa",
       "finished": false,
       "team1_score": 0,
       "team2_score": 0,
