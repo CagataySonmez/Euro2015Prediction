@@ -419,8 +419,8 @@
       "match_id": 49,
       "team1": "Portekiz",
       "team2": "Galler",
-      "finished": false,
-      "team1_score": 0,
+      "finished": true,
+      "team1_score": 2,
       "team2_score": 0,
       "date": "2016-07-06T19:00:00.000Z"
     }],
@@ -437,7 +437,7 @@
   [
     [{
       "match_id": 51,
-      "team1": "Belirsiz",
+      "team1": "Portekiz",
       "team2": "Belirsiz",
       "finished": false,
       "team1_score": 0,
