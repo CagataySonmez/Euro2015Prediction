@@ -6,11 +6,12 @@
         .filter('capitalizer', UserFormetter)
         .controller('Points.IndexController', Controller);
 
-    function Controller(UserService, ScheduleService) {
+    function Controller($scope, UserService, ScheduleService) {
         var vm = this;
 
         vm.user = null;
-        vm.points = null;
+        vm.score = null;
+        vm.hideAllScoreButton = false;
 
         initController();
 
@@ -19,15 +20,26 @@
             UserService.GetCurrent().then(function (user) {
                 vm.user = user;
 
-                getPoint(vm.user.username);
+                getTop25Points(vm.user.username);
             });
-
         }
 
-        function getPoint(username) {
-            ScheduleService.GetPoint(username,
+        function getTop25Points(username) {
+            ScheduleService.GetTop25Points(username,
                 function(result){
-                    vm.points = result.data;
+                    vm.score = result.data;
+                },
+                function(err){
+                    console.log(err);
+                }
+            );
+        }
+
+        $scope.gelAllPoints = function() {
+            vm.hideAllScoreButton = true;
+            ScheduleService.GetAllPoints(vm.user.username,
+                function(result){
+                    vm.score = result.data;
                 },
                 function(err){
                     console.log(err);

@@ -40,19 +40,18 @@ function getPoints() {
         }
         else
         {
-            var points = new Object();
-            points.topPoints = new Array();
+            var points = new Array();
             var numOfFunctionCall = 0;
 
             for(var i=0; i<users.length; i++){
                 calculatePoint(users[i].username,users[i].firstName,users[i].lastName,
                     function(result){
                         numOfFunctionCall++;
-                        points.topPoints.push(result);
+                        points.push(result);
 
                         if(numOfFunctionCall === users.length){
                             //sort points
-                            points.topPoints.sort(function(a, b){
+                            points.sort(function(a, b){
                                 if(a.point > b.point)
                                     return -1;
                                 else if(a.point < b.point)
@@ -65,8 +64,6 @@ function getPoints() {
                                     return 0;
                             });
 
-                            //cut points
-                            points.topPoints = points.topPoints.slice(0,25);
                             deferred.resolve(points);
                         }
                     },

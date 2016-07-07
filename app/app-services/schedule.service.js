@@ -10,14 +10,19 @@
         var service = {};
 
         service.GetAll = GetAll;
-        service.GetPoint = GetPoint;
+        service.GetAllPoints = GetAllPoints;
+        service.GetTop25Points = GetTop25Points;
         service.GetPredictions = GetPredictions;
         service.SetPredictions = SetPredictions;
 
         return service;
 
-        function GetPoint(username,handleSuccess,handleError){
-            $http.get('/api/prediction/getPoint/'+username).then(handleSuccess, handleError);
+        function GetAllPoints(username,handleSuccess,handleError){
+            $http.get('/api/prediction/getAllPoints/'+username).then(handleSuccess, handleError);
+        }
+
+        function GetTop25Points(username,handleSuccess,handleError){
+            $http.get('/api/prediction/getTop25Points/'+username).then(handleSuccess, handleError);
         }
 
         function GetPredictions(username,handleSuccess,handleError){

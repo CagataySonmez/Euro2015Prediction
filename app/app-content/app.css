@@ -99,3 +99,31 @@ html:after{
 .table{
     border-bottom: 1px solid #ccc;
 }
+
+#score_title{
+    float: left;
+}
+
+#score_button{
+    float: right;
+    margin-top: 20px;
+}
+
+#table_row_1{
+    color: #610B0B;
+}
+
+#table_row_2{
+    color: #0B610B;
+}
+
+#table_row_3{
+    color: #0B0B61;
+}
+
+#table_row_1,
+#table_row_2,
+#table_row_3,
+#user_place{
+    font-weight: bold;
+}
