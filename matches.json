@@ -439,7 +439,7 @@
       "match_id": 51,
       "team1": "Portekiz",
       "team2": "Fransa",
-      "finished": false,
+      "finished": true,
       "team1_score": 0,
       "team2_score": 0,
       "date": "2016-07-10T19:00:00.000Z"
